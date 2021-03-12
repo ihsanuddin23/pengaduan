@@ -8,6 +8,6 @@ class UsersController extends Controller
 {
     public function UsersView()
     {
-        return view('admin.v_admin');
+        return view('users.v_users');
     }
 }

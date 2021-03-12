@@ -33,9 +33,9 @@ class AuthController extends Controller
         // var_dump($loginTypeMasyarakat); die;
 
         if(Auth::guard('masyarakat')->attempt($loginTypeMasyarakat)) {
-            echo "masyarakat";
+            return redirect('users');
         }elseif (Auth::guard('petugas')->attempt($loginTypeAdmin)) {
-            echo "admin";
+            return redirect('admin');
         }elseif (Auth::guard('petugas')->attempt($loginTypePetugas)) {
             echo "petugas";
         }else{

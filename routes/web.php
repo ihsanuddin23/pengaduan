@@ -26,6 +26,10 @@ Route::group(['prefix' => '/users'], function() {
 /* Admin Dashboard */
 Route::group(['prefix' => '/admin'], function() {
     Route::get('/' ,'AdminController@AdminView')->name('admin.view');
+    // Route::get('/management-users' ,'ManagementUsersAdmin@ManagementUsers')->name('management.user');
+    Route::resources([
+		'management-users' => 'ManagementUsersAdmin'
+	]);
 });
 
 /* Petugas Dashboard */
